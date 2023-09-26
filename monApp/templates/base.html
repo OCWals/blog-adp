@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Application Django d'entrainement (Blog)"> 
+        <title>{% block title %}SlawTech - Django Blog{% endblock %}</title>
+        <!-- Charger django-widget-tweaks ici -->
+        {% load widget_tweaks %}
+        <!-- Bootstrap ici -->
+        {% load bootstrap4 %} <!-- Chargez les tags Bootstrap ici -->
+        {% bootstrap_css %} <!-- Inclut le CSS de Bootstrap -->
+    </head>
+    <body>
+        <header>
+            <!-- Header ici -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                    <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="/articles">Articles</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#">Autres</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="https://slawtech.info/" target=_blank>SlawTech.info</a>
+                    </li>
+                </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main class="container">
+            {% block content %}
+            <!-- Le contenu spécifique de chaque page sera ici -->
+            {% endblock %}
+        </main>
+
+        <footer>
+            <!-- Le footer ici -->
+        </footer>
+
+        <!-- Bootstrap JS + jQuery ici -->
+        {% bootstrap_javascript jquery='full' %}
+    </body>
+</html>

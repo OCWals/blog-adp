@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+
+{% block title %}Inscription{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <h1>Inscription</h1>
+    <form method="post" class="form-group">
+      {% csrf_token %}
+      {{ form.username.label_tag }} <br>
+      {{ form.username|add_class:"form-control" }} <br>
+      
+      {{ form.email.label_tag }} <br>
+      {{ form.email|add_class:"form-control" }} <br>
+      
+      {{ form.password.label_tag }} <br>
+      {{ form.password|add_class:"form-control" }} <br>
+      
+      {{ form.password_confirm.label_tag }} <br>
+      {{ form.password_confirm|add_class:"form-control" }} <br>
+      
+      <button type="submit" class="btn btn-primary">S'inscrire</button>
+    </form>
+  </div>
+{% endblock %}

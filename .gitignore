@@ -1,0 +1,25 @@
+# Django specific
+*.pot
+*.pyc
+__pycache__
+db.sqlite3
+media
+
+# Python files
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+
+# Custom
+.idea/
+.vscode/
+*.swp
+*.swo
+*.swn
+
+# macOS files
+.DS_Store
+
+# Windows files
+Thumbs.db

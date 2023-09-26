@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Article List
+{% endblock %}
+      
+{% block content %}
+    <section>
+        <h1>Article List</h1>
+    </section>
+    <section>
+        <ul class="list">
+            {% for article in articles %}
+                <li class="list list-item">
+                    <h4 class="article-title">
+                        <a href="{% url  'article_detail' article.slug %}">
+                            {{ article.title }}
+                        </a>
+                    </h4>
+                    <p class="article-date">{{ article.date }}</p>
+                    <p class="article-excerpt">{{ article.excerpt }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
+{% endblock %}
